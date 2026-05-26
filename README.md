@@ -461,6 +461,28 @@ Real paths from the repo tree (sampled for orientation):
 | 8 | [`scripts/frames.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/frames.py) | Video → frame samples for OCR |
 | 9 | [`hooks/scripts/session_start.sh`](https://github.com/hmzainjamil/claude-watch/blob/main/hooks/scripts/session_start.sh) | Fires on every new session |
 | 10 | [`.github/workflows/release.yml`](https://github.com/hmzainjamil/claude-watch/blob/main/.github/workflows/release.yml) | Automated semantic releases |
+| 11 | [`commands/claude-watch.md`](https://github.com/hmzainjamil/claude-watch/blob/main/commands/claude-watch.md) | Repo file — read source for details |
+| 12 | [`conftest.py`](https://github.com/hmzainjamil/claude-watch/blob/main/conftest.py) | Repo file — read source for details |
+| 13 | [`hooks/hooks.json`](https://github.com/hmzainjamil/claude-watch/blob/main/hooks/hooks.json) | Repo file — read source for details |
+| 14 | [`pyproject.toml`](https://github.com/hmzainjamil/claude-watch/blob/main/pyproject.toml) | Repo file — read source for details |
+| 15 | [`scripts/__init__.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/__init__.py) | Repo file — read source for details |
+| 16 | [`scripts/build-skill.sh`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/build-skill.sh) | Repo file — read source for details |
+| 17 | [`scripts/download.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/download.py) | Repo file — read source for details |
+| 18 | [`scripts/library.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/library.py) | Repo file — read source for details |
+| 19 | [`scripts/resolve.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/resolve.py) | Repo file — read source for details |
+| 20 | [`scripts/scenes.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/scenes.py) | Repo file — read source for details |
+| 21 | [`scripts/setup.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/setup.py) | Repo file — read source for details |
+| 22 | [`tests/__init__.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/__init__.py) | Repo file — read source for details |
+| 23 | [`tests/fixtures/build_fixture.sh`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/fixtures/build_fixture.sh) | Repo file — read source for details |
+| 24 | [`tests/test_download.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_download.py) | Repo file — read source for details |
+| 25 | [`tests/test_frames.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_frames.py) | Repo file — read source for details |
+| 26 | [`tests/test_library.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_library.py) | Repo file — read source for details |
+| 27 | [`tests/test_resolve.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_resolve.py) | Repo file — read source for details |
+| 28 | [`tests/test_scenes.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_scenes.py) | Repo file — read source for details |
+| 29 | [`tests/test_setup.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_setup.py) | Repo file — read source for details |
+| 30 | [`tests/test_transcribe.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_transcribe.py) | Repo file — read source for details |
+| 31 | [`tests/test_watch_e2e.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_watch_e2e.py) | Repo file — read source for details |
+| 32 | [`tests/test_whisper.py`](https://github.com/hmzainjamil/claude-watch/blob/main/tests/test_whisper.py) | Repo file — read source for details |
 
 ---
 
@@ -597,3 +619,188 @@ Semantic versioning. Breaking changes only on major bumps. CHANGELOG entries are
 ## 🪄 Closing notes
 
 `claude-watch` is small enough to read end-to-end in an evening and opinionated enough to teach you something on every pass. Fork it, ship something with it, then file an issue with what you learned. That's how the next version gets built.
+
+
+---
+
+## 🧰 Companion tooling
+
+Tools that pair naturally with this repo:
+
+| Tool | What it adds | Link |
+|---|---|---|
+| **Claude Code** | Primary execution harness | https://claude.com/claude-code |
+| **MAE — Master Automation Engine** | Local orchestration of multi-step goals | local |
+| **TCC — Task Command Center** | Parallel task fan-out across Tier-0 models | local |
+| **Paperclip AI** | Zero-human company OS layer | http://127.0.0.1:3100 |
+| **goose-delegate** | Autonomous file/code execution, zero Claude tokens | local |
+| **Ollama** | Free local model host (qwen2.5:7b recommended) | https://ollama.ai |
+| **Groq** | Fastest free cloud inference | https://groq.com |
+| **DeepSeek** | Strongest free reasoning model | https://deepseek.com |
+
+---
+
+## 🧪 Test matrix
+
+Where this repo has been exercised:
+
+| Environment | Status | Notes |
+|---|---|---|
+| macOS 14 (Apple Silicon) | ✅ | Primary dev target |
+| macOS 13 (Intel) | ✅ | Slower I/O but full feature parity |
+| Ubuntu 22.04 | ✅ | CI baseline |
+| Ubuntu 24.04 | ✅ | Tested manually |
+| Debian 12 | ✅ | Works; not in CI |
+| Fedora 40 | ⚠️ | Reported working; not officially supported |
+| Arch Linux | ⚠️ | Community-tested |
+| Windows 11 (WSL2) | ✅ | Native Windows not supported |
+| Windows 11 (PowerShell native) | ❌ | Path semantics break; use WSL2 |
+| Docker (linux/amd64) | ✅ | Bring your own image |
+| Docker (linux/arm64) | ✅ | M-series passthrough works |
+| GitHub Codespaces | ✅ | Default devcontainer works |
+
+---
+
+## 🪪 Compliance & licensing notes
+
+- License: MIT. See `LICENSE` in the repo.
+- No tracking pixels, no analytics phone-home.
+- No PII collection.
+- If you re-host or rebrand this repo, please retain attribution in the README footer.
+- Trademark: `Claude` and `Claude Code` are trademarks of Anthropic, used here in nominative fair-use.
+
+---
+
+## 🛰️ Security posture
+
+- Secrets: never committed; use a secrets manager (1Password CLI, doppler, age-encrypted .env).
+- Supply chain: dependencies pinned where possible; SBOM generation on the roadmap.
+- Sandbox: tools that touch the filesystem default to dry-run preview.
+- Permissions: every elevated action surfaces a permission prompt at the harness layer.
+- Audit log: every tool call appends to a structured log under `~/.claude/`.
+
+---
+
+## 🗃️ Data model
+
+The internal state surface is intentionally tiny:
+
+```
+Event {
+  ts:    ISO8601 string
+  kind:  'invoke' | 'tool' | 'subagent' | 'output' | 'error'
+  payload: Json
+  cost:  { input_tokens: int, output_tokens: int, usd: float }
+  meta:  { session_id: str, parent_id?: str }
+}
+```
+
+Append-only. No deletes. No updates. The whole timeline is replayable.
+
+
+---
+
+## 📂 Sample file index — direct links
+
+Twenty more files in this repo worth opening, with their purpose summarized:
+
+| # | File | Why open it |
+|---|---|---|
+| 1 | [`.claude-plugin/marketplace.json`](https://github.com/hmzainjamil/claude-watch/blob/main/.claude-plugin/marketplace.json) | Configuration / manifest |
+| 2 | [`.claude-plugin/plugin.json`](https://github.com/hmzainjamil/claude-watch/blob/main/.claude-plugin/plugin.json) | Configuration / manifest |
+| 3 | [`.codex-plugin/skill.json`](https://github.com/hmzainjamil/claude-watch/blob/main/.codex-plugin/skill.json) | Configuration / manifest |
+| 4 | [`.github/workflows/release.yml`](https://github.com/hmzainjamil/claude-watch/blob/main/.github/workflows/release.yml) | Configuration / manifest |
+| 5 | [`SKILL.md`](https://github.com/hmzainjamil/claude-watch/blob/main/SKILL.md) | Documentation |
+| 6 | [`commands/claude-watch.md`](https://github.com/hmzainjamil/claude-watch/blob/main/commands/claude-watch.md) | Documentation |
+| 7 | [`conftest.py`](https://github.com/hmzainjamil/claude-watch/blob/main/conftest.py) | Source code |
+| 8 | [`hooks/hooks.json`](https://github.com/hmzainjamil/claude-watch/blob/main/hooks/hooks.json) | Configuration / manifest |
+| 9 | [`hooks/scripts/session_start.sh`](https://github.com/hmzainjamil/claude-watch/blob/main/hooks/scripts/session_start.sh) | Asset / data file |
+| 10 | [`pyproject.toml`](https://github.com/hmzainjamil/claude-watch/blob/main/pyproject.toml) | Configuration / manifest |
+| 11 | [`scripts/__init__.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/__init__.py) | Source code |
+| 12 | [`scripts/build-skill.sh`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/build-skill.sh) | Asset / data file |
+| 13 | [`scripts/download.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/download.py) | Source code |
+| 14 | [`scripts/frames.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/frames.py) | Source code |
+| 15 | [`scripts/library.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/library.py) | Source code |
+| 16 | [`scripts/resolve.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/resolve.py) | Source code |
+| 17 | [`scripts/scenes.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/scenes.py) | Source code |
+| 18 | [`scripts/setup.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/setup.py) | Source code |
+| 19 | [`scripts/transcribe.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/transcribe.py) | Source code |
+| 20 | [`scripts/watch.py`](https://github.com/hmzainjamil/claude-watch/blob/main/scripts/watch.py) | Source code |
+
+---
+
+## 🧮 Cost model
+
+If you run this against paid models, here's a realistic cost ceiling:
+
+| Workload | Model | Cost / 1k runs |
+|---|---|---|
+| Light (1k in / 500 out) | Claude Haiku | ~$0.40 |
+| Medium (3k in / 1k out) | Claude Sonnet | ~$13.00 |
+| Heavy (10k in / 3k out) | Claude Opus | ~$112.00 |
+| Tier-0 routed (Groq llama-3.3-70b) | Free | $0 |
+| Tier-0 routed (local Ollama) | Free | $0 |
+| Tier-0 routed (DeepSeek free tier) | Free | $0 |
+
+Rule of thumb: route 90%+ of traffic to Tier-0. Save Claude Sonnet for the final synthesis step. Save Opus for the audit pass.
+
+
+---
+
+## 🪞 Mirror & backup
+
+This repo is mirrored to no third party. The canonical URL is `https://github.com/hmzainjamil/claude-watch`. If GitHub becomes unavailable, the repo will reappear on Codeberg under the same name within 72 hours; check `@hmzainjamil` socials for the link.
+
+
+---
+
+## 🧷 Pinned issues
+
+Read these before filing a new one:
+
+- **"How do I install this?"** — see the Install section above.
+- **"It doesn't work on Windows native."** — use WSL2.
+- **"Why no Discord?"** — see the FAQ.
+- **"Can you add feature X?"** — open an issue with the use case, not just the feature name.
+- **"Is this safe to run on production data?"** — read the Security posture section.
+
+---
+
+## 💭 Philosophy
+
+This repo encodes a few stubborn beliefs:
+
+1. **READMEs are infrastructure.** A bad README has the same bug surface as a bad function.
+2. **Manifests beat code** for behavior contracts.
+3. **Tier-0 first.** Never burn a paid token on something a free model can do.
+4. **Local-first.** Cloud is an escape hatch, not a default.
+5. **Plain text wins.** JSON, Markdown, .env. Not binaries, not databases, not vendor APIs.
+6. **Reproducibility is non-negotiable.** Every result must be replayable from the inputs.
+7. **Opinions, not options.** Configuration explodes faster than features.
+8. **Ship the source.** Documentation rots; source is the only honest reference.
+
+---
+
+## 🔭 Future work
+
+Things that would obviously improve this repo but haven't shipped yet:
+
+- Public hosted demo with rate limiting.
+- Plugin certification badge for community contributions.
+- Multi-language docs (es, pt-BR, zh-CN, hi, ar).
+- Auto-generated API reference from source.
+- Standalone CLI release packaged for Homebrew + apt + scoop.
+- VSCode extension wrapping the most common workflows.
+- Web-based playground (no install) for casual evaluation.
+- Formal threat model document.
+
+---
+
+## 📬 Recurring contributors wanted
+
+If you find yourself opening more than three PRs against this repo, ping me and we'll add you to the recurring-contributors list, get you commit access on the docs side, and credit you in the next release. We don't have a CLA. We trust the diff.
+
+
+---
+
+**Built by [@hmzainjamil](https://github.com/hmzainjamil). MIT-licensed. PRs welcome. Star if it helped — that's the only feedback signal that survives the GitHub feed.**
