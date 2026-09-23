@@ -1,5 +1,9 @@
 # claude-watch
 
+<!-- HMZ PORTFOLIO STANDARD -->
+> Portfolio status: active · Visibility: public · Source of truth: current repository source.
+<!-- END HMZ PORTFOLIO STANDARD -->
+
 > **Real-time Claude Code session watcher — usage, cost, activity, alerts** — Python-based session watcher that monitors Claude Code sessions, tracks token cost, fires alerts, and produces searchable activity logs
 
 <p align="center">
