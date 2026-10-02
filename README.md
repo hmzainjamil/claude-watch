@@ -33,7 +33,7 @@ This README describes commands from SKILL.md and the scripts. They were not exec
 ## Privacy and safety
 
 - Video downloads and screenshots can contain private or confidential material.
-- Whisper fallback sends audio to the configured external provider. Review provider policy and obtain approval before using sensitive recordings.
+- Before sending extracted audio to Groq or OpenAI Whisper, tell the user which provider receives it and ask for explicit consent. Prior explicit authorization for that external transcription is sufficient. Without consent, use `--no-whisper` and produce frames-only notes when possible.
 - Keep API keys in the local config file. Do not commit credentials or generated notes/screenshots containing sensitive information.
 - Generated notes may omit context or misread frames. Verify important statements against the original video.
 - No transcription quality, privacy certification, or production readiness is claimed.
@@ -41,6 +41,7 @@ This README describes commands from SKILL.md and the scripts. They were not exec
 ## Repository map
 
 - [Skill instructions](SKILL.md)
+- [Security and data handling](SECURITY.md)
 - [Executable scripts](scripts/)
 - [Tests](tests/)
 - [Change history](CHANGELOG.md)
