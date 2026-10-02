@@ -68,6 +68,10 @@ Optional flags:
 
 Do **not** delete the library dir. It is the artifact.
 
+## External transcription consent
+
+Extracted audio can contain private speech, names, workplace material, or other sensitive information. Before running the Whisper fallback, state that extracted audio will be sent to the configured provider (Groq or OpenAI) and ask for the user's explicit consent. Prior explicit authorization for that external transcription is sufficient. Without consent, pass `--no-whisper` and continue with frames-only notes when possible. Never send the original video or API key to the transcription provider through this workflow.
+
 ## Notes template (non-negotiable structure)
 
 ````markdown

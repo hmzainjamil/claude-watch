@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased] - 2026-10-02
+
+### Changed
+- Added an explicit consent gate before extracted audio is sent to the configured Whisper provider.
+- Added the SECURITY.md data and credential boundary.
+
+
 All notable changes to `claude-watch` are documented here.
 
 ## [0.1.0] — 2026-05-03
